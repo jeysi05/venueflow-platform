@@ -1,0 +1,30 @@
+{
+  "name": "venueflow-platform",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:courts": "npm run dev --workspace @venueflow/courtflow-demo",
+    "dev:villas": "npm run dev --workspace @venueflow/luxestay-demo",
+    "dev:resorts": "npm run dev --workspace @venueflow/resortflow-demo",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "check:conflicts": "node scripts/check-conflicts.mjs",
+    "check:json": "node scripts/check-json.mjs",
+    "verify": "npm run check:conflicts && npm run check:json && npm run typecheck && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.19",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "postcss": "8.4.39",
+    "tailwindcss": "3.4.4",
+    "typescript": "5.5.3"
+  }
+}
