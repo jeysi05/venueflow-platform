@@ -8,11 +8,11 @@ export const profile: BookingProfile = {
   brand: {
     id: "courtflow",
     name: "CourtFlow Demo",
-    eyebrow: "Hourly court reservations",
-    heroTitle: "Reserve Your Court Without the Back-and-Forth",
-    heroSubtitle: "A polished booking flow for pickleball, badminton, and private sports facilities.",
-    primaryColor: "#164734",
-    supportLabel: "Need help with your reservation?",
+    eyebrow: "Premium court reservations",
+    heroTitle: "Book Your Court. Own Your Game.",
+    heroSubtitle: "A fast, premium reservation experience for pickleball, badminton, and private sports facilities.",
+    primaryColor: "#113F2D",
+    supportLabel: "Need help choosing a court?",
     contact: {
       chatUrl: "https://m.me/placeholder",
       phone: "+639XXXXXXXXX",
@@ -20,40 +20,65 @@ export const profile: BookingProfile = {
     }
   },
   operatingHours: {
-    open: "08:00",
+    open: "06:00",
     close: "23:00",
     slotDurationMinutes: 60
   },
   resources: [
     {
-      id: "pickleball-court",
-      label: "Pickleball Court",
+      id: "premium-pickleball-court",
+      label: "Premium Pickleball Court",
       kind: "court",
-      meta: "Indoor court",
-      description: "Private court access for singles, doubles, and group training.",
-      rate: 500
+      meta: "Indoor · Pro surface · Up to 4 players",
+      description: "Tournament-ready pickleball court with clean sightlines, premium flooring, and private group access.",
+      rate: 620
     },
     {
-      id: "badminton-court",
-      label: "Badminton Court",
+      id: "indoor-badminton-court",
+      label: "Indoor Badminton Court",
       kind: "court",
-      meta: "Wood flooring",
-      description: "Hourly badminton reservations with clear availability and peak pricing support.",
-      rate: 450
+      meta: "Wood flooring · Doubles-ready",
+      description: "A polished indoor badminton court for casual games, weekly groups, and competitive rallies.",
+      rate: 520
     },
     {
       id: "training-court",
       label: "Training Court",
       kind: "court",
-      meta: "Coach-ready",
-      description: "A focused space for drills, coaching sessions, and recurring reservations.",
-      rate: 650
+      meta: "Coach-ready · Drills & lessons",
+      description: "A focused training space for private coaching, skills development, and recurring practice sessions.",
+      rate: 750
     }
   ],
   addons: [
-    { id: "racket-rental", label: "Racket Rental", description: "Add rental rackets during checkout.", price: 80, maxQuantity: 6 },
-    { id: "ball-tube", label: "Ball Tube", description: "Fresh balls prepared for the session.", price: 120, maxQuantity: 4 },
-    { id: "coach-session", label: "Coach Session", description: "Add a private coach for the selected hour.", price: 700, maxQuantity: 2 }
+    {
+      id: "racket-rental",
+      label: "Racket Rental",
+      description: "Reserve clean rental rackets for the session.",
+      price: 90,
+      maxQuantity: 6
+    },
+    {
+      id: "ball-tube",
+      label: "Ball Tube",
+      description: "Fresh balls prepared before your court time.",
+      price: 140,
+      maxQuantity: 4
+    },
+    {
+      id: "coach-session",
+      label: "Coach Session",
+      description: "Add a private coach for drills and guided play.",
+      price: 850,
+      maxQuantity: 2
+    },
+    {
+      id: "extra-player-pass",
+      label: "Extra Player Pass",
+      description: "Add additional players for larger groups.",
+      price: 120,
+      maxQuantity: 8
+    }
   ],
   copy: {
     dateHeading: "Pick a play date",
@@ -61,7 +86,7 @@ export const profile: BookingProfile = {
     timeHeading: "Available court times",
     addOnHeading: "Court add-ons",
     emptyCheckout: "Select a court time to continue",
-    reserveCta: "Reserve",
+    reserveCta: "Reserve court",
     unitLabel: "hour"
   }
 };
