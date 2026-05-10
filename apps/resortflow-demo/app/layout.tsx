@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "@venueflow/booking-engine/styles";
-import { profile } from "@/config/profile";
+import { resortProfile } from "@/config/profile";
 
 export const metadata: Metadata = {
-  title: `${profile.brand.name} Booking`,
-  description: profile.brand.heroSubtitle
+  title: `${resortProfile.brand.name} Booking`,
+  description: resortProfile.brand.heroSubtitle
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

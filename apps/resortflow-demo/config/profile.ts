@@ -1,6 +1,6 @@
 import type { BookingProfile } from "@venueflow/booking-engine";
 
-export const profile: BookingProfile = {
+export const resortProfile: BookingProfile = {
   id: "resortflow-demo",
   mode: "daily",
   bookingWindowDays: 14,
@@ -8,9 +8,9 @@ export const profile: BookingProfile = {
   brand: {
     id: "resortflow",
     name: "ResortFlow Demo",
-    eyebrow: "Resort access and day-pass booking",
+    eyebrow: "Private resort reservations",
     heroTitle: "Plan Your Resort Escape",
-    heroSubtitle: "Day-pass and resort amenity reservations built for private getaways and group visits.",
+    heroSubtitle: "A polished booking experience for day passes, private cabanas, and overnight resort stays.",
     primaryColor: "#17483E",
     supportLabel: "Need help planning your visit?",
     contact: {
@@ -24,38 +24,63 @@ export const profile: BookingProfile = {
       id: "pool-day-pass",
       label: "Pool Day Pass",
       kind: "resort",
-      meta: "Per guest group",
-      description: "Access to pool amenities, seating, shower areas, and guest facilities.",
+      meta: "Best for families",
+      description: "Full-day access to the pool deck, lounge areas, shower rooms, and guest facilities.",
       rate: 2500
     },
     {
       id: "cabana-access",
       label: "Cabana Access",
       kind: "resort",
-      meta: "Up to 8 guests",
-      description: "Private cabana reservation for daytime resort visits and celebrations.",
+      meta: "Premium day use",
+      description: "Private cabana access for celebrations, family gatherings, and relaxed resort visits.",
       rate: 4200
     },
     {
       id: "overnight-suite",
       label: "Overnight Suite",
       kind: "resort",
-      meta: "Up to 6 guests",
-      description: "Premium suite access for private resort stays and special occasions.",
+      meta: "Most immersive",
+      description: "A premium overnight suite experience for private resort stays and weekend escapes.",
       rate: 9500
     }
   ],
   addons: [
-    { id: "towel-package", label: "Towel Package", description: "Prepared towels for your group.", price: 250, maxQuantity: 10 },
-    { id: "meal-voucher", label: "Meal Voucher", description: "Food and beverage credit for the visit.", price: 500, maxQuantity: 12 },
-    { id: "extra-guest", label: "Extra Guest Pass", description: "Add more guests to the reservation.", price: 750, maxQuantity: 10 }
+    {
+      id: "meal-voucher",
+      label: "Meal Voucher",
+      description: "Food and beverage credit prepared for your group.",
+      price: 500,
+      maxQuantity: 12
+    },
+    {
+      id: "towel-package",
+      label: "Towel Package",
+      description: "Fresh towels prepared for day-pass and overnight guests.",
+      price: 250,
+      maxQuantity: 12
+    },
+    {
+      id: "extra-guest-pass",
+      label: "Extra Guest Pass",
+      description: "Add more guests beyond the included group size.",
+      price: 750,
+      maxQuantity: 10
+    },
+    {
+      id: "celebration-setup",
+      label: "Celebration Setup",
+      description: "Simple welcome styling for birthdays, proposals, or family events.",
+      price: 1800,
+      maxQuantity: 1
+    }
   ],
   copy: {
     dateHeading: "Choose your visit date",
-    resourceHeading: "Choose a resort space",
-    timeHeading: "Visit details",
+    resourceHeading: "Choose a resort experience",
+    timeHeading: "Review your resort stay",
     addOnHeading: "Resort add-ons",
-    emptyCheckout: "Select a resort space and visit date",
+    emptyCheckout: "Select a resort experience to continue",
     reserveCta: "Reserve",
     unitLabel: "day"
   }
